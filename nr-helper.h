@@ -888,8 +888,7 @@ class NrHelper : public Object
         size_t nVertPorts{1};        ///< Number of antenna ports in vertical direction
         double bearingAngle{0.0};    ///< Bearing angle in radians
         double polSlantAngle{0.0};   ///< Polarization slant angle in radians
-        std::vector<double> PortPowerAllocation{}; ///< Power allocation for each port
-         ///< Power allocation for each port
+        std::vector<double> port_power{}; ///< Power of each antenna port
     };
 
     /// \brief parameters for the search of optimal rank and precoding matrix indicator (RI, PMI)
