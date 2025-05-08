@@ -1640,7 +1640,6 @@ NrHelper::DoAssignStreamsToChannelObjects(Ptr<NrSpectrumPhy> phy, int64_t curren
     Ptr<ThreeGppSpectrumPropagationLossModel> spectrumLossModel =
         DynamicCast<ThreeGppSpectrumPropagationLossModel>(
             phy->GetSpectrumChannel()->GetPhasedArraySpectrumPropagationLossModel());
-
     if (spectrumLossModel)
     {
         if (std::find(m_channelObjectsWithAssignedStreams.begin(),
@@ -2101,18 +2100,6 @@ NrHelper::SetupGnbAntennas(const NrHelper::AntennaParams& ap)
     SetGnbAntennaAttribute("NumVerticalPorts", UintegerValue(ap.nVertPorts));
     SetGnbAntennaAttribute("BearingAngle", DoubleValue(ap.bearingAngle));
     SetGnbAntennaAttribute("PolSlantAngle", DoubleValue(ap.polSlantAngle));
-    if (!ap.PortPowerAllocation.empty()) {
-        // Create a string representation of the vector of double values
-        std::ostringstream oss;
-        for (size_t i = 0; i < ap.PortPowerAllocation.size(); ++i) {
-            if (i > 0) {
-                oss << ";";
-            }
-            oss << ap.PortPowerAllocation[i];
-        }
-        SetGnbAntennaAttribute("PortPowerAllocation", StringValue(oss.str()));
-    }
-    
 }
 
 void
@@ -2133,7 +2120,6 @@ NrHelper::SetupUeAntennas(const NrHelper::AntennaParams& ap)
     SetUeAntennaAttribute("NumVerticalPorts", UintegerValue(ap.nVertPorts));
     SetUeAntennaAttribute("BearingAngle", DoubleValue(ap.bearingAngle));
     SetUeAntennaAttribute("PolSlantAngle", DoubleValue(ap.polSlantAngle));
-
 }
 
 void
@@ -2153,3 +2139,4 @@ NrHelper::SetupMimoPmi(const NrHelper::MimoPmiParams& mp)
 }
 
 } // namespace ns3
+
