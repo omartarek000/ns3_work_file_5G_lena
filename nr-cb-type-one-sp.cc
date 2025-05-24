@@ -267,9 +267,9 @@ NrCbTypeOneSp::GetBasePrecMatFromIndex(size_t i11, size_t i12, size_t i13, size_
             if (IsPowerAllocationActive())
             {
                 // First polarization
-                precMat(vIdx, layer) = normalizer * v[vIdx] * sqrt(m_portpower[vIdx]);
+                precMat(vIdx, layer) =  v[vIdx] * sqrt(m_portpower[vIdx]);
                 // Second polarization
-                precMat(vIdx + v.size(), layer) = normalizer * m_signPhiN[layer] * phiN * v[vIdx] 
+                precMat(vIdx + v.size(), layer) =  m_signPhiN[layer] * phiN * v[vIdx] 
                                                 * sqrt(m_portpower[vIdx + v.size()]);
             }
             else
