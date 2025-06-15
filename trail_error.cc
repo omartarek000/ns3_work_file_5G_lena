@@ -41,14 +41,164 @@ $  ./ns3 run cttc-nr-mimo-demo -- --enableMimoFeedback=0
  #include "ns3/nr-module.h"
  #include "ns3/point-to-point-module.h"
  #include "ns3/string.h"
+ #include <iomanip> // For std::setprecision
  
  using namespace ns3;
  NS_LOG_COMPONENT_DEFINE("CttcNrMimoDemo");
  
- 
- 
- int
- main(int argc, char* argv[])
+//  // Improved function to measure gNB power with per-port analysis
+// void printGnbPsdImproved(Ptr<NrGnbNetDevice> gnbDevice)
+// {
+//     double currentTime = Simulator::Now().GetSeconds();
+    
+//     // Get the spectrum PHY
+//     Ptr<NrSpectrumPhy> spectrumPhy = gnbDevice->GetPhy(0)->GetSpectrumPhy();
+//     if (!spectrumPhy)
+//     {
+//         std::cout << currentTime << " s: Error - Spectrum PHY is null" << std::endl;
+//         return;
+//     }
+    
+//     // Get the PSD
+//     Ptr<const SpectrumValue> psd = spectrumPhy->GetTxPowerSpectralDensity();
+//     if (!psd)
+//     {
+//         std::cout << currentTime << " s: Error - PSD is null" << std::endl;
+//         return;
+//     }
+    
+//     std::cout << "\n=== gNB Power Analysis at " << currentTime << " s ===" << std::endl;
+    
+//     // 1. Analyze the PSD distribution
+//     double totalPowerWatts = 0.0;
+//     double minPower = std::numeric_limits<double>::max();
+//     double maxPower = std::numeric_limits<double>::min();
+    
+//     Ptr<const SpectrumModel> sm = psd->GetSpectrumModel();
+//     Values::const_iterator it = psd->ConstValuesBegin();
+//     uint32_t numBands = 0;
+    
+//     for (uint32_t i = 0; it != psd->ConstValuesEnd(); ++it, ++i, ++numBands)
+//     {
+//         double power = *it;
+//         totalPowerWatts += power;
+//         minPower = std::min(minPower, power);
+//         maxPower = std::max(maxPower, power);
+        
+//         // Only print first few and last few bands to avoid clutter
+//         if (i < 5 || i >= numBands - 5)
+//         {
+//             std::cout << "Band " << i << ": " << std::scientific << std::setprecision(6)
+//                       << power << " W/Hz" << std::endl;
+//         }
+//         else if (i == 5)
+//         {
+//             std::cout << "... (bands 5-" << (numBands-6) << " similar) ..." << std::endl;
+//         }
+//     }
+    
+//     // 2. Calculate bandwidth and total power
+//     double totalBandwidth = 0.0;
+//     for (auto it = sm->Begin(); it != sm->End(); ++it)
+//     {
+//         auto band = *it;
+//         totalBandwidth += (band.fh - band.fl);
+//     }
+    
+//     double actualTxPower = totalPowerWatts * totalBandwidth;
+    
+//     // 3. Analysis output
+//     std::cout << "\n--- Power Analysis Results ---" << std::endl;
+//     std::cout << "Number of frequency bands: " << numBands << std::endl;
+//     std::cout << "Min PSD: " << std::scientific << minPower << " W/Hz" << std::endl;
+//     std::cout << "Max PSD: " << std::scientific << maxPower << " W/Hz" << std::endl;
+//     std::cout << "PSD Variation: " << (maxPower - minPower) << " W/Hz" << std::endl;
+//     std::cout << "Average PSD: " << (totalPowerWatts / numBands) << " W/Hz" << std::endl;
+//     std::cout << "Total Bandwidth: " << totalBandwidth << " Hz" << std::endl;
+//     std::cout << "Total TX Power: " << std::scientific << actualTxPower << " W" << std::endl;
+//     std::cout << "Total TX Power: " << 10 * log10(actualTxPower * 1000) << " dBm" << std::endl;
+    
+//     // 4. Check if PSD is uniform (indicating potential issue)
+//     if (abs(maxPower - minPower) < 1e-10)
+//     {
+//         std::cout << "WARNING: PSD is uniform across all bands!" << std::endl;
+//         std::cout << "This suggests per-port power settings may not be applied." << std::endl;
+//     }
+// }
+
+// // Function to access and print antenna configuration details
+// void printAntennaConfiguration(Ptr<NrGnbNetDevice> gnbDevice)
+// {
+//     double currentTime = Simulator::Now().GetSeconds();
+//     std::cout << "\n=== Antenna Configuration at " << currentTime << " s ===" << std::endl;
+    
+//     // Get PHY layer
+//     Ptr<NrGnbPhy> gnbPhy = gnbDevice->GetPhy(0);
+//     if (!gnbPhy)
+//     {
+//         std::cout << "Error: gNB PHY is null" << std::endl;
+//         return;
+//     }
+    
+//     // Get basic PHY parameters
+//     std::cout << "TX Power: " << gnbPhy->GetTxPower() << " dBm" << std::endl;
+//     std::cout << "Noise Figure: " << gnbPhy->GetNoiseFigure() << " dB" << std::endl;
+// }
+
+// // Enhanced scheduling function with antenna info
+// void scheduleEnhancedGnbMeasurements(Ptr<NrGnbNetDevice> gnbDevice, double simTime, double interval = 1.0)
+// {
+//     // Print antenna configuration once at the beginning
+//     Simulator::Schedule(Seconds(0.1), &printAntennaConfiguration, gnbDevice);
+    
+//     // Schedule power measurements
+//     for (double t = 1.0; t <= simTime; t += interval)
+//     {
+//         Simulator::Schedule(Seconds(t), &printGnbPsdImproved, gnbDevice);
+//     }
+// }
+
+// // Function to directly access codebook and port power information
+// void printCodebookInfo(Ptr<NrGnbNetDevice> gnbDevice)
+// {
+//     double currentTime = Simulator::Now().GetSeconds();
+//     std::cout << "\n=== Codebook Information at " << currentTime << " s ===" << std::endl;
+    
+//     Ptr<NrGnbPhy> gnbPhy = gnbDevice->GetPhy(0);
+//     if (!gnbPhy)
+//     {
+//         std::cout << "Error: gNB PHY is null" << std::endl;
+//         return;
+//     }
+    
+//     Ptr<NrSpectrumPhy> spectrumPhy = gnbPhy->GetSpectrumPhy();
+//     if (!spectrumPhy)
+//     {
+//         std::cout << "Error: Spectrum PHY is null" << std::endl;
+//         return;
+//     }
+// }
+
+// // Function to calculate theoretical power based on configuration
+// void calculateTheoreticalPower(std::vector<double> portPowers, double bandwidth)
+// {
+//     std::cout << "\n=== Theoretical Power Calculation ===" << std::endl;
+    
+//     double totalPortPower = 0.0;
+//     for (size_t i = 0; i < portPowers.size(); ++i)
+//     {
+//         std::cout << "Port " << i << " power: " << portPowers[i] << std::endl;
+//         totalPortPower += portPowers[i];
+//     }
+    
+//     std::cout << "Total theoretical power (linear): " << totalPortPower << std::endl;
+//     std::cout << "Total theoretical power (dBm): " << 10 * log10(totalPortPower * 1000) << " dBm" << std::endl;
+//     std::cout << "With bandwidth " << bandwidth << " Hz:" << std::endl;
+//     std::cout << "Theoretical PSD: " << (totalPortPower / bandwidth) << " W/Hz" << std::endl;
+// }
+
+
+ int main(int argc, char* argv[])
  {
      Config::SetDefault("ns3::NrHelper::EnableMimoFeedback", BooleanValue(true));
      Config::SetDefault("ns3::NrPmSearch::SubbandSize", UintegerValue(16));
@@ -71,8 +221,8 @@ $  ./ns3 run cttc-nr-mimo-demo -- --enableMimoFeedback=0
      apGnb.nHorizPorts = 2;
      apGnb.nVertPorts = 1;
      apGnb.isDualPolarized = true;
-     apGnb.port_power = {0.25 , 0.25, 0.0, 0.0 }; // port power for each antenna element
- 
+     apGnb.port_power = {1.0, 0.0, 0.0, 0.0 }; // port power for each antenna element
+    
     
  
      // The polarization slant angle in degrees in case of x-polarized
@@ -350,6 +500,7 @@ $  ./ns3 run cttc-nr-mimo-demo -- --enableMimoFeedback=0
          // Set port power directly on codebook
          if (!apGnb.port_power.empty())
          {
+             std::cout<< "Setting port power for gNB antenna" << std::endl;
              std::stringstream ss;
              NS_LOG_INFO("Port power vector from antenna params:");
              for (size_t i = 0; i < apGnb.port_power.size(); ++i)
@@ -357,6 +508,7 @@ $  ./ns3 run cttc-nr-mimo-demo -- --enableMimoFeedback=0
                  NS_LOG_INFO("  Port " << i << ": " << apGnb.port_power[i]);
                  if (i > 0) ss << ",";
                  ss << apGnb.port_power[i];
+                 std::cout << "  Port " << i << ": " << apGnb.port_power[i] << std::endl;
              }
              NS_LOG_INFO("Setting port power string: " << ss.str());
              Config::SetDefault("ns3::NrCbTypeOneSp::PortPower", StringValue(ss.str()));
@@ -466,8 +618,11 @@ $  ./ns3 run cttc-nr-mimo-demo -- --enableMimoFeedback=0
      if (enableInterfNode)
      {
          nrHelper->AttachToGnb(ueNetDev.Get(1), gnbNetDev.Get(1));
+
      }
- 
+
+
+     
      /**
       * Install DL traffic part.
       */
@@ -535,7 +690,10 @@ $  ./ns3 run cttc-nr-mimo-demo -- --enableMimoFeedback=0
      monitor->SetAttribute("DelayBinWidth", DoubleValue(0.001));
      monitor->SetAttribute("JitterBinWidth", DoubleValue(0.001));
      monitor->SetAttribute("PacketSizeBinWidth", DoubleValue(20));
- 
+
+    
+
+    //  scheduleEnhancedGnbMeasurements(DynamicCast<NrGnbNetDevice>(gnbNetDev.Get(0)), simTime.GetSeconds());
      Simulator::Stop(simTime);
      Simulator::Run();
  

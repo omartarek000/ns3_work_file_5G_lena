@@ -11,6 +11,11 @@
 #include <ns3/nr-spectrum-value-helper.h>
 #include <ns3/string.h>
 #include <ns3/uinteger.h>
+#include <ns3/simulator.h> // Added to use Simulator::Now()
+#include <fstream>
+#include <iomanip>
+#include <iostream>
+#include <cmath>
 
 #include <complex.h>
 #include <sstream>
@@ -267,10 +272,10 @@ NrCbTypeOneSp::GetBasePrecMatFromIndex(size_t i11, size_t i12, size_t i13, size_
             if (IsPowerAllocationActive())
             {
                 // First polarization
-                precMat(vIdx, layer) =  v[vIdx] * sqrt(m_portpower[vIdx]);
+                precMat(vIdx, layer) =  normalizer *   v[vIdx]*(m_portpower[vIdx]);
                 // Second polarization
-                precMat(vIdx + v.size(), layer) =  m_signPhiN[layer] * phiN * v[vIdx] 
-                                                * sqrt(m_portpower[vIdx + v.size()]);
+                precMat(vIdx + v.size(), layer) =   normalizer *   m_signPhiN[layer] * phiN * v[vIdx] 
+                                                * (m_portpower[vIdx + v.size()]);
             }
             else
             {
@@ -279,7 +284,56 @@ NrCbTypeOneSp::GetBasePrecMatFromIndex(size_t i11, size_t i12, size_t i13, size_
                 precMat(vIdx + v.size(), layer) = normalizer * m_signPhiN[layer] * phiN * v[vIdx];
             }
         }
+
     }
+    // double totalPower = 0.0;
+    // std::cout << "\n=== Precoding Matrix at time " << Simulator::Now().GetSeconds() << " s ===\n";
+    // std::cout << "Precoding Matrix Entries (magnitude):\n";
+    // for (size_t port = 0; port < m_nPorts; ++port)
+    // {
+    //     std::cout << "Port " << port << ": ";
+    //     for (size_t layer = 0; layer < m_rank; ++layer)
+    //     {
+    //         double magnitude = std::abs(precMat(port, layer));
+    //         std::cout << magnitude << " ";
+    //         totalPower += std::norm(precMat(port, layer)); // |w|^2
+    //     }
+    //     std::cout << "\n";
+    // }
+    
+    // // Compute power scale and effective power
+    // double expectedPower = m_nPorts * m_rank; // If all entries were unit magnitude
+    // double powerScale = totalPower / expectedPower;
+    // double configuredTxPowerDbm = 60.0; // Assumed from your simulation
+    // double effectiveTxPowerDbm = configuredTxPowerDbm + 10 * std::log10(powerScale);
+    // double effectiveTxPowerWatts = std::pow(10.0, (effectiveTxPowerDbm - 30.0) / 10.0);
+    
+    // // Display results
+    // std::cout << "Total Power (sum of |w|^2): " << totalPower << "\n";
+    // std::cout << "Expected Power (nPorts * nRank): " << expectedPower << "\n";
+    // std::cout << "Power Scale: " << powerScale << "\n";
+    // std::cout << "Configured TX Power: " << configuredTxPowerDbm << " dBm\n";
+    // std::cout << "Effective TX Power: " << effectiveTxPowerDbm << " dBm (" << effectiveTxPowerWatts << " W)\n";
+    // if (effectiveTxPowerDbm < configuredTxPowerDbm)
+    // {
+    //     std::cout << "Power reduction achieved: " << (configuredTxPowerDbm - effectiveTxPowerDbm) << " dB\n";
+    // }
+    // else
+    // {
+    //     std::cout << "Warning: No power reduction observed!\n";
+    // }
+    
+    // // Write to CSV file
+    // static bool headerWritten = false;
+    // std::ofstream csvFile("power_data1000.csv", std::ios::app); // Open in append mode
+    // if (!headerWritten)
+    // {
+    //     csvFile << "Timestamp,EffectivePower_dBm,EffectivePower_W\n"; // Write header once
+    //     headerWritten = true;
+    // }
+    // csvFile << std::fixed << std::setprecision(6) << Simulator::Now().GetSeconds() << "," 
+    //         << effectiveTxPowerDbm << "," << effectiveTxPowerWatts << "\n"; // Write data
+    
     return precMat;
 }
 
