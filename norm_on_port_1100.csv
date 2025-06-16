@@ -1,0 +1,409 @@
+portPowerLabel,enableMimoFeedback,rankLimit,gnbUeDistance,Metric,Value
+default,1,4,0,Tx Packets,15000
+default,1,4,0,Tx Bytes,15420000
+default,1,4,0,TxOffered,205.600000
+default,1,4,0,Rx Bytes,7695608
+default,1,4,0,Throughput,102.608107
+default,1,4,0,Mean delay,147.712292
+default,1,4,0,Mean jitter,0.104360
+default,1,4,0,Rx Packets,7486
+default,1,4,20,Tx Packets,15000
+default,1,4,20,Tx Bytes,15420000
+default,1,4,20,TxOffered,205.600000
+default,1,4,20,Rx Bytes,15244212
+default,1,4,20,Throughput,203.256160
+default,1,4,20,Mean delay,7.939961
+default,1,4,20,Mean jitter,0.076798
+default,1,4,20,Rx Packets,14829
+default,1,4,40,Tx Packets,15000
+default,1,4,40,Tx Bytes,15420000
+default,1,4,40,TxOffered,205.600000
+default,1,4,40,Rx Bytes,14928616
+default,1,4,40,Throughput,199.048213
+default,1,4,40,Mean delay,17.314841
+default,1,4,40,Mean jitter,0.077604
+default,1,4,40,Rx Packets,14522
+default,1,4,60,Tx Packets,15000
+default,1,4,60,Tx Bytes,15420000
+default,1,4,60,TxOffered,205.600000
+default,1,4,60,Rx Bytes,14156588
+default,1,4,60,Throughput,188.754507
+default,1,4,60,Mean delay,35.583416
+default,1,4,60,Mean jitter,0.079683
+default,1,4,60,Rx Packets,13771
+default,1,4,80,Tx Packets,15000
+default,1,4,80,Tx Bytes,15420000
+default,1,4,80,TxOffered,205.600000
+default,1,4,80,Rx Bytes,14221352
+default,1,4,80,Throughput,189.618027
+default,1,4,80,Mean delay,22.230058
+default,1,4,80,Mean jitter,0.079532
+default,1,4,80,Rx Packets,13834
+default,1,4,100,Tx Packets,15000
+default,1,4,100,Tx Bytes,15420000
+default,1,4,100,TxOffered,205.600000
+default,1,4,100,Rx Bytes,13840992
+default,1,4,100,Throughput,184.546560
+default,1,4,100,Mean delay,35.039672
+default,1,4,100,Mean jitter,0.080677
+default,1,4,100,Rx Packets,13464
+default,1,4,120,Tx Packets,15000
+default,1,4,120,Tx Bytes,15420000
+default,1,4,120,TxOffered,205.600000
+default,1,4,120,Rx Bytes,13901644
+default,1,4,120,Throughput,185.355253
+default,1,4,120,Mean delay,21.545361
+default,1,4,120,Mean jitter,0.080500
+default,1,4,120,Rx Packets,13523
+default,1,4,140,Tx Packets,15000
+default,1,4,140,Tx Bytes,15420000
+default,1,4,140,TxOffered,205.600000
+default,1,4,140,Rx Bytes,14229576
+default,1,4,140,Throughput,189.727680
+default,1,4,140,Mean delay,20.250067
+default,1,4,140,Mean jitter,0.079595
+default,1,4,140,Rx Packets,13842
+default,1,4,160,Tx Packets,15000
+default,1,4,160,Tx Bytes,15420000
+default,1,4,160,TxOffered,205.600000
+default,1,4,160,Rx Bytes,14659280
+default,1,4,160,Throughput,195.457067
+default,1,4,160,Mean delay,21.893659
+default,1,4,160,Mean jitter,0.078642
+default,1,4,160,Rx Packets,14260
+default,1,4,180,Tx Packets,15000
+default,1,4,180,Tx Bytes,15420000
+default,1,4,180,TxOffered,205.600000
+default,1,4,180,Rx Bytes,14525640
+default,1,4,180,Throughput,193.675200
+default,1,4,180,Mean delay,24.082179
+default,1,4,180,Mean jitter,0.079071
+default,1,4,180,Rx Packets,14130
+default,1,4,200,Tx Packets,15000
+default,1,4,200,Tx Bytes,15420000
+default,1,4,200,TxOffered,205.600000
+default,1,4,200,Rx Bytes,13219052
+default,1,4,200,Throughput,176.254027
+default,1,4,200,Mean delay,52.049298
+default,1,4,200,Mean jitter,0.083011
+default,1,4,200,Rx Packets,12859
+default,1,4,220,Tx Packets,15000
+default,1,4,220,Tx Bytes,15420000
+default,1,4,220,TxOffered,205.600000
+default,1,4,220,Rx Bytes,12680380
+default,1,4,220,Throughput,169.071733
+default,1,4,220,Mean delay,64.657851
+default,1,4,220,Mean jitter,0.085026
+default,1,4,220,Rx Packets,12335
+default,1,4,240,Tx Packets,15000
+default,1,4,240,Tx Bytes,15420000
+default,1,4,240,TxOffered,205.600000
+default,1,4,240,Rx Bytes,12209556
+default,1,4,240,Throughput,162.794080
+default,1,4,240,Mean delay,75.373837
+default,1,4,240,Mean jitter,0.086870
+default,1,4,240,Rx Packets,11877
+default,1,4,260,Tx Packets,15000
+default,1,4,260,Tx Bytes,15420000
+default,1,4,260,TxOffered,205.600000
+default,1,4,260,Rx Bytes,12164324
+default,1,4,260,Throughput,162.190987
+default,1,4,260,Mean delay,72.311249
+default,1,4,260,Mean jitter,0.087214
+default,1,4,260,Rx Packets,11833
+default,1,4,280,Tx Packets,15000
+default,1,4,280,Tx Bytes,15420000
+default,1,4,280,TxOffered,205.600000
+default,1,4,280,Rx Bytes,12984668
+default,1,4,280,Throughput,173.128907
+default,1,4,280,Mean delay,102.075875
+default,1,4,280,Mean jitter,0.085342
+default,1,4,280,Rx Packets,12631
+default,1,4,300,Tx Packets,15000
+default,1,4,300,Tx Bytes,15420000
+default,1,4,300,TxOffered,205.600000
+default,1,4,300,Rx Bytes,13044292
+default,1,4,300,Throughput,173.923893
+default,1,4,300,Mean delay,92.437821
+default,1,4,300,Mean jitter,0.084694
+default,1,4,300,Rx Packets,12689
+default,1,4,320,Tx Packets,15000
+default,1,4,320,Tx Bytes,15420000
+default,1,4,320,TxOffered,205.600000
+default,1,4,320,Rx Bytes,12897288
+default,1,4,320,Throughput,171.963840
+default,1,4,320,Mean delay,92.774563
+default,1,4,320,Mean jitter,0.084929
+default,1,4,320,Rx Packets,12546
+default,1,4,340,Tx Packets,15000
+default,1,4,340,Tx Bytes,15420000
+default,1,4,340,TxOffered,205.600000
+default,1,4,340,Rx Bytes,12742060
+default,1,4,340,Throughput,169.894133
+default,1,4,340,Mean delay,95.474626
+default,1,4,340,Mean jitter,0.085134
+default,1,4,340,Rx Packets,12395
+default,1,4,360,Tx Packets,15000
+default,1,4,360,Tx Bytes,15420000
+default,1,4,360,TxOffered,205.600000
+default,1,4,360,Rx Bytes,12654680
+default,1,4,360,Throughput,168.729067
+default,1,4,360,Mean delay,96.538155
+default,1,4,360,Mean jitter,0.085498
+default,1,4,360,Rx Packets,12310
+default,1,4,380,Tx Packets,15000
+default,1,4,380,Tx Bytes,15420000
+default,1,4,380,TxOffered,205.600000
+default,1,4,380,Rx Bytes,12483004
+default,1,4,380,Throughput,166.440053
+default,1,4,380,Mean delay,98.974095
+default,1,4,380,Mean jitter,0.086229
+default,1,4,380,Rx Packets,12143
+default,1,4,400,Tx Packets,15000
+default,1,4,400,Tx Bytes,15420000
+default,1,4,400,TxOffered,205.600000
+default,1,4,400,Rx Bytes,12458332
+default,1,4,400,Throughput,166.111093
+default,1,4,400,Mean delay,99.348804
+default,1,4,400,Mean jitter,0.086321
+default,1,4,400,Rx Packets,12119
+default,1,4,420,Tx Packets,15000
+default,1,4,420,Tx Bytes,15420000
+default,1,4,420,TxOffered,205.600000
+default,1,4,420,Rx Bytes,12174604
+default,1,4,420,Throughput,162.328053
+default,1,4,420,Mean delay,105.157800
+default,1,4,420,Mean jitter,0.087562
+default,1,4,420,Rx Packets,11843
+default,1,4,440,Tx Packets,15000
+default,1,4,440,Tx Bytes,15420000
+default,1,4,440,TxOffered,205.600000
+default,1,4,440,Rx Bytes,12104700
+default,1,4,440,Throughput,161.396000
+default,1,4,440,Mean delay,90.488241
+default,1,4,440,Mean jitter,0.087460
+default,1,4,440,Rx Packets,11775
+default,1,4,460,Tx Packets,15000
+default,1,4,460,Tx Bytes,15420000
+default,1,4,460,TxOffered,205.600000
+default,1,4,460,Rx Bytes,11980312
+default,1,4,460,Throughput,159.737493
+default,1,4,460,Mean delay,91.755726
+default,1,4,460,Mean jitter,0.087980
+default,1,4,460,Rx Packets,11654
+default,1,4,480,Tx Packets,15000
+default,1,4,480,Tx Bytes,15420000
+default,1,4,480,TxOffered,205.600000
+default,1,4,480,Rx Bytes,11783964
+default,1,4,480,Throughput,157.119520
+default,1,4,480,Mean delay,95.509644
+default,1,4,480,Mean jitter,0.089268
+default,1,4,480,Rx Packets,11463
+default,1,4,500,Tx Packets,15000
+default,1,4,500,Tx Bytes,15420000
+default,1,4,500,TxOffered,205.600000
+default,1,4,500,Rx Bytes,11641072
+default,1,4,500,Throughput,155.214293
+default,1,4,500,Mean delay,97.800598
+default,1,4,500,Mean jitter,0.089986
+default,1,4,500,Rx Packets,11324
+default,1,4,520,Tx Packets,15000
+default,1,4,520,Tx Bytes,15420000
+default,1,4,520,TxOffered,205.600000
+default,1,4,520,Rx Bytes,11549580
+default,1,4,520,Throughput,153.994400
+default,1,4,520,Mean delay,114.484360
+default,1,4,520,Mean jitter,0.090724
+default,1,4,520,Rx Packets,11235
+default,1,4,540,Tx Packets,15000
+default,1,4,540,Tx Bytes,15420000
+default,1,4,540,TxOffered,205.600000
+default,1,4,540,Rx Bytes,11419024
+default,1,4,540,Throughput,152.253653
+default,1,4,540,Mean delay,100.152340
+default,1,4,540,Mean jitter,0.091041
+default,1,4,540,Rx Packets,11108
+default,1,4,560,Tx Packets,15000
+default,1,4,560,Tx Bytes,15420000
+default,1,4,560,TxOffered,205.600000
+default,1,4,560,Rx Bytes,11015020
+default,1,4,560,Throughput,146.866933
+default,1,4,560,Mean delay,105.120983
+default,1,4,560,Mean jitter,0.093062
+default,1,4,560,Rx Packets,10715
+default,1,4,580,Tx Packets,15000
+default,1,4,580,Tx Bytes,15420000
+default,1,4,580,TxOffered,205.600000
+default,1,4,580,Rx Bytes,10558588
+default,1,4,580,Throughput,140.781173
+default,1,4,580,Mean delay,113.006139
+default,1,4,580,Mean jitter,0.095181
+default,1,4,580,Rx Packets,10271
+default,1,4,600,Tx Packets,15000
+default,1,4,600,Tx Bytes,15420000
+default,1,4,600,TxOffered,205.600000
+default,1,4,600,Rx Bytes,10290280
+default,1,4,600,Throughput,137.203733
+default,1,4,600,Mean delay,134.252339
+default,1,4,600,Mean jitter,0.097059
+default,1,4,600,Rx Packets,10010
+default,1,4,620,Tx Packets,15000
+default,1,4,620,Tx Bytes,15420000
+default,1,4,620,TxOffered,205.600000
+default,1,4,620,Rx Bytes,9882164
+default,1,4,620,Throughput,131.762187
+default,1,4,620,Mean delay,149.518358
+default,1,4,620,Mean jitter,0.099736
+default,1,4,620,Rx Packets,9613
+default,1,4,640,Tx Packets,15000
+default,1,4,640,Tx Bytes,15420000
+default,1,4,640,TxOffered,205.600000
+default,1,4,640,Rx Bytes,9695068
+default,1,4,640,Throughput,129.267573
+default,1,4,640,Mean delay,135.707503
+default,1,4,640,Mean jitter,0.100524
+default,1,4,640,Rx Packets,9431
+default,1,4,660,Tx Packets,15000
+default,1,4,660,Tx Bytes,15420000
+default,1,4,660,TxOffered,205.600000
+default,1,4,660,Rx Bytes,9516196
+default,1,4,660,Throughput,126.882613
+default,1,4,660,Mean delay,137.689602
+default,1,4,660,Mean jitter,0.101666
+default,1,4,660,Rx Packets,9257
+default,1,4,680,Tx Packets,15000
+default,1,4,680,Tx Bytes,15420000
+default,1,4,680,TxOffered,205.600000
+default,1,4,680,Rx Bytes,9185180
+default,1,4,680,Throughput,122.469067
+default,1,4,680,Mean delay,143.360762
+default,1,4,680,Mean jitter,0.103933
+default,1,4,680,Rx Packets,8935
+default,1,4,700,Tx Packets,15000
+default,1,4,700,Tx Bytes,15420000
+default,1,4,700,TxOffered,205.600000
+default,1,4,700,Rx Bytes,8799680
+default,1,4,700,Throughput,117.329067
+default,1,4,700,Mean delay,155.034189
+default,1,4,700,Mean jitter,0.105374
+default,1,4,700,Rx Packets,8560
+default,1,4,720,Tx Packets,15000
+default,1,4,720,Tx Bytes,15420000
+default,1,4,720,TxOffered,205.600000
+default,1,4,720,Rx Bytes,8277456
+default,1,4,720,Throughput,110.366080
+default,1,4,720,Mean delay,152.206074
+default,1,4,720,Mean jitter,0.105440
+default,1,4,720,Rx Packets,8052
+default,1,4,740,Tx Packets,15000
+default,1,4,740,Tx Bytes,15420000
+default,1,4,740,TxOffered,205.600000
+default,1,4,740,Rx Bytes,8010176
+default,1,4,740,Throughput,106.802347
+default,1,4,740,Mean delay,155.888476
+default,1,4,740,Mean jitter,0.105719
+default,1,4,740,Rx Packets,7792
+default,1,4,760,Tx Packets,15000
+default,1,4,760,Tx Bytes,15420000
+default,1,4,760,TxOffered,205.600000
+default,1,4,760,Rx Bytes,7799436
+default,1,4,760,Throughput,103.992480
+default,1,4,760,Mean delay,160.051028
+default,1,4,760,Mean jitter,0.107537
+default,1,4,760,Rx Packets,7587
+default,1,4,780,Tx Packets,15000
+default,1,4,780,Tx Bytes,15420000
+default,1,4,780,TxOffered,205.600000
+default,1,4,780,Rx Bytes,7628788
+default,1,4,780,Throughput,101.717173
+default,1,4,780,Mean delay,169.833651
+default,1,4,780,Mean jitter,0.109279
+default,1,4,780,Rx Packets,7421
+default,1,4,800,Tx Packets,15000
+default,1,4,800,Tx Bytes,15420000
+default,1,4,800,TxOffered,205.600000
+default,1,4,800,Rx Bytes,6800220
+default,1,4,800,Throughput,90.669600
+default,1,4,800,Mean delay,223.516103
+default,1,4,800,Mean jitter,0.119825
+default,1,4,800,Rx Packets,6615
+default,1,4,820,Tx Packets,15000
+default,1,4,820,Tx Bytes,15420000
+default,1,4,820,TxOffered,205.600000
+default,1,4,820,Rx Bytes,6573032
+default,1,4,820,Throughput,87.640427
+default,1,4,820,Mean delay,222.149439
+default,1,4,820,Mean jitter,0.122646
+default,1,4,820,Rx Packets,6394
+default,1,4,840,Tx Packets,15000
+default,1,4,840,Tx Bytes,15420000
+default,1,4,840,TxOffered,205.600000
+default,1,4,840,Rx Bytes,6226596
+default,1,4,840,Throughput,83.021280
+default,1,4,840,Mean delay,255.073318
+default,1,4,840,Mean jitter,0.127416
+default,1,4,840,Rx Packets,6057
+default,1,4,860,Tx Packets,15000
+default,1,4,860,Tx Bytes,15420000
+default,1,4,860,TxOffered,205.600000
+default,1,4,860,Rx Bytes,6159776
+default,1,4,860,Throughput,82.130347
+default,1,4,860,Mean delay,261.296721
+default,1,4,860,Mean jitter,0.128324
+default,1,4,860,Rx Packets,5992
+default,1,4,880,Tx Packets,15000
+default,1,4,880,Tx Bytes,15420000
+default,1,4,880,TxOffered,205.600000
+default,1,4,880,Rx Bytes,5986044
+default,1,4,880,Throughput,79.813920
+default,1,4,880,Mean delay,262.668563
+default,1,4,880,Mean jitter,0.131485
+default,1,4,880,Rx Packets,5823
+default,1,4,900,Tx Packets,15000
+default,1,4,900,Tx Bytes,15420000
+default,1,4,900,TxOffered,205.600000
+default,1,4,900,Rx Bytes,5586152
+default,1,4,900,Throughput,74.482027
+default,1,4,900,Mean delay,266.893914
+default,1,4,900,Mean jitter,0.135834
+default,1,4,900,Rx Packets,5434
+default,1,4,920,Tx Packets,15000
+default,1,4,920,Tx Bytes,15420000
+default,1,4,920,TxOffered,205.600000
+default,1,4,920,Rx Bytes,5418588
+default,1,4,920,Throughput,72.247840
+default,1,4,920,Mean delay,266.611117
+default,1,4,920,Mean jitter,0.138752
+default,1,4,920,Rx Packets,5271
+default,1,4,940,Tx Packets,15000
+default,1,4,940,Tx Bytes,15420000
+default,1,4,940,TxOffered,205.600000
+default,1,4,940,Rx Bytes,5099908
+default,1,4,940,Throughput,67.998773
+default,1,4,940,Mean delay,265.942572
+default,1,4,940,Mean jitter,0.143261
+default,1,4,940,Rx Packets,4961
+default,1,4,960,Tx Packets,15000
+default,1,4,960,Tx Bytes,15420000
+default,1,4,960,TxOffered,205.600000
+default,1,4,960,Rx Bytes,4760668
+default,1,4,960,Throughput,63.475573
+default,1,4,960,Mean delay,262.597624
+default,1,4,960,Mean jitter,0.151570
+default,1,4,960,Rx Packets,4631
+default,1,4,980,Tx Packets,15000
+default,1,4,980,Tx Bytes,15420000
+default,1,4,980,TxOffered,205.600000
+default,1,4,980,Rx Bytes,4817208
+default,1,4,980,Throughput,64.229440
+default,1,4,980,Mean delay,259.741854
+default,1,4,980,Mean jitter,0.150158
+default,1,4,980,Rx Packets,4686
+default,1,4,1000,Tx Packets,15000
+default,1,4,1000,Tx Bytes,15420000
+default,1,4,1000,TxOffered,205.600000
+default,1,4,1000,Rx Bytes,4701044
+default,1,4,1000,Throughput,62.680587
+default,1,4,1000,Mean delay,259.094122
+default,1,4,1000,Mean jitter,0.152556
+default,1,4,1000,Rx Packets,4573
